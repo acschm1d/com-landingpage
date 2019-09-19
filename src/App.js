@@ -1,16 +1,15 @@
 import React from "react";
-import "./assets/scss/main.scss";
+import "./assets/scss/index.scss";
 
-import { Landing } from "./components";
+import { Landing, Header } from "./components";
 
-function App() {
-  return (
-    <>
-      <div id="layout">
-        <Landing />
-      </div>
-    </>
-  );
-}
+const App = () => (
+  <>
+    <div id="layout">
+      <Header />
+      <Landing />
+    </div>
+  </>
+);
 
 export default App;
