@@ -5,10 +5,10 @@ import { Landing, Header } from "./components";
 
 const App = () => (
   <>
-    <div id="layout">
+    <main id="layout">
       <Header />
       <Landing />
-    </div>
+    </main>
   </>
 );
 

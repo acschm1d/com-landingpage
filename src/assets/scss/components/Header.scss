@@ -7,6 +7,11 @@
     @include flexbox();
     max-width: 1560px;
     margin: 0 auto;
+    margin-bottom: 25px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      margin-bottom: 20px;
+    }
 
     // Logo
     #logo {
@@ -27,10 +32,6 @@
 
       @media screen and (min-width: $breakpoint-desktop) {
         font-size: 2.2rem;
-      }
-
-      > span {
-        color: $color-yellow;
       }
     }
 

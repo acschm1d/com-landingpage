@@ -21,7 +21,7 @@ const Header = () => (
   <div id="topbar">
     <div>
       <div id="logo">
-        acschmid<span>.</span>
+        acschmid<span class="yellow">.</span>
       </div>
       <nav id="externals">
         <ul>
