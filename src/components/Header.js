@@ -19,25 +19,27 @@ const externalLinks = [
 
 const Header = () => (
   <div id="topbar">
-    <div id="logo">
-      acschmid<span>.</span>
+    <div>
+      <div id="logo">
+        acschmid<span>.</span>
+      </div>
+      <nav id="externals">
+        <ul>
+          {externalLinks.map(({ icon, href, target, title }, key) => (
+            <li key={key}>
+              <a
+                rel="nofollow noopener noreferrer"
+                target={target}
+                href={href}
+                title={title}
+              >
+                {icon}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
-    <nav id="externals">
-      <ul>
-        {externalLinks.map(({ icon, href, target, title }, key) => (
-          <li key={key}>
-            <a
-              rel="nofollow noopener noreferrer"
-              target={target}
-              href={href}
-              title={title}
-            >
-              {icon}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
   </div>
 );
 

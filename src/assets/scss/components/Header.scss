@@ -1,1 +1,87 @@
 @import "../parts/variables";
+@import "../parts/mixins";
+
+#topbar {
+  @include noselect();
+  > div {
+    @include flexbox();
+    max-width: 1560px;
+    margin: 0 auto;
+
+    // Logo
+    #logo {
+      font-family: $font-family-header;
+      font-weight: $font-weight-semibold;
+      font-size: 1.6rem;
+      color: $color-pink;
+      padding: 15px;
+      @include flex(1);
+
+      @media screen and (min-width: $breakpoint-smartphone) {
+        padding: 15px 20px;
+      }
+
+      @media screen and (min-width: $breakpoint-tablet) {
+        padding: 50px 30px 20px 30px;
+      }
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 2.2rem;
+      }
+
+      > span {
+        color: $color-yellow;
+      }
+    }
+
+    // External profile links
+    #externals {
+      padding: 5px;
+
+      @media screen and (min-width: $breakpoint-smartphone) {
+        padding: 5px 10px;
+      }
+
+      @media screen and (min-width: $breakpoint-tablet) {
+        padding: 10px 20px;
+      }
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        padding: 40px 20px 10px 20px;
+      }
+
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        display: inline-block;
+        list-style: none;
+
+        &:not(:last-child) {
+          margin-right: 5px;
+
+          @media screen and (min-width: $breakpoint-desktop) {
+            margin-right: 15px;
+          }
+        }
+
+        a {
+          display: inline-block;
+          padding: 10px;
+
+          svg {
+            width: 16px;
+            height: auto;
+
+            @media screen and (min-width: $breakpoint-desktop) {
+              width: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

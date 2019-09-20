@@ -1,12 +1,27 @@
 @import "libs/normalize";
 @import "parts/variables";
+@import "parts/fonts";
 
+html,
 body {
   margin: 0;
   padding: 0;
 }
 
+html {
+  font-size: 10px;
+}
 body {
+  font-family: $font-family-text;
+  font-size: 1.4rem;
   background-color: $color-blue;
   color: #fff;
+
+  @media screen and (min-width: $breakpoint-smartphone) {
+    font-size: 1.6rem;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 2rem;
+  }
 }
