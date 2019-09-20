@@ -2,7 +2,10 @@
 @import "../parts/mixins";
 
 #topbar {
+  position: relative;
+  z-index: 2;
   @include noselect();
+
   > div {
     @include flexbox();
     max-width: 1560px;
