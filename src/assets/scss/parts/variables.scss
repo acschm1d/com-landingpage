@@ -14,3 +14,10 @@ $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-black: 900;
+
+// Exports
+:export {
+  tiny: 320;
+  breakpointSmartphone: 375;
+  breakpointTablet: 1024;
+}

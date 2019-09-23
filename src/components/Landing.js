@@ -1,4 +1,5 @@
 import React from "react";
+import Devices from "./Devices";
 import "../assets/scss/components/Landing.scss";
 
 const Landing = () => (
@@ -25,6 +26,7 @@ const Landing = () => (
         </div>
       </div>
     </div>
+    <Devices />
   </div>
 );
 
