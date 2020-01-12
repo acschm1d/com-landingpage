@@ -5,15 +5,15 @@ import { GitHub, LinkedIn } from "../assets/img/icons";
 const externalLinks = [
   {
     icon: <GitHub />,
-    href: "https://github.com/acschm1d/com",
+    href: "https://github.com/acschm1d",
     target: "_blank",
-    title: "View Website on Github"
+    title: "Visit me on Github"
   },
   {
     icon: <LinkedIn />,
     href: "https://www.linkedin.com/in/acschmid",
     target: "_blank",
-    title: "Visit LinkedIn profile"
+    title: "Visit me on LinkedIn"
   }
 ];
 

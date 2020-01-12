@@ -3,7 +3,7 @@
 
 #topbar {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   @include noselect();
 
   > div {
@@ -47,10 +47,6 @@
       }
 
       @media screen and (min-width: $breakpoint-tablet) {
-        padding: 10px 20px;
-      }
-
-      @media screen and (min-width: $breakpoint-desktop) {
         padding: 40px 20px 10px 20px;
       }
 
@@ -79,9 +75,17 @@
           svg {
             width: 16px;
             height: auto;
+            opacity: 1;
+            @include transition(150ms opacity ease);
 
             @media screen and (min-width: $breakpoint-desktop) {
               width: 22px;
+            }
+          }
+
+          &:hover {
+            svg {
+              opacity: 0.8;
             }
           }
         }
