@@ -10,6 +10,9 @@
   }
 
   .text-outer {
+    position: relative;
+    z-index: 2;
+
     @media screen and (min-width: $breakpoint-tablet) {
       position: absolute;
       top: 0;

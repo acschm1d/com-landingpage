@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/scss/components/Devices.scss";
 import styles from "../assets/scss/parts/variables.scss";
 
 const sizes = Object.values(styles)
