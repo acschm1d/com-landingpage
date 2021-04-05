@@ -1,20 +1,17 @@
 import React from "react";
 import "../assets/scss/components/Devices.scss";
-import styles from "../assets/scss/parts/variables.scss";
 
-const sizes = Object.values(styles)
-  .map(size => parseInt(size))
-  .reverse();
+const sizes = [1024, 375, 320];
 
 const images = ["cup", "laptop"].reduce((carry, image) => {
   if (!carry[image]) {
     carry[image] = [];
   }
 
-  sizes.forEach(size => {
+  sizes.forEach((size) => {
     carry[image] = [
       ...carry[image],
-      { size, img: require(`../assets/img/device-${image}-${size}.png`) }
+      { size, img: require(`../assets/img/device-${image}-${size}.png`) },
     ];
   });
 
@@ -30,7 +27,7 @@ const Devices = () => (
             {imageSizePair.map(({ img, size }) => (
               <source
                 key={size}
-                srcSet={img}
+                srcSet={img.default}
                 media={`(min-width: ${size}px)`}
               />
             ))}
