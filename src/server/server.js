@@ -14,7 +14,7 @@ server.get(
   express.static(path.resolve(__dirname, '../../public'))
 );
 
-server.use('*', (_, res) => {
+server.get('/', (_, res) => {
   const rawHTML = fs.readFileSync(path.resolve(__dirname, '../app.html'), {
     encoding: 'utf8',
   });
