@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import settings from '../lib/settings';
-import { GitHub, LinkedIn } from '../assets/img/icons';
+import { GitHub, LinkedIn } from '../assets/icons';
 
 const externalLinks = [
   {
