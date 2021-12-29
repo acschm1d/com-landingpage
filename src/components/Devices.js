@@ -11,10 +11,9 @@ const images = ['cup', 'laptop'].reduce((carry, image) => {
   }
 
   sizes.forEach((size) => {
-    const asset = require(`../assets/img/device-${image}-${size}.png`);
     carry[image] = [
       ...carry[image],
-      { size, img: Object.entries(asset).length ? asset : null },
+      { size, img: `/assets/img/device-${image}-${size}.png` },
     ];
   });
 
@@ -58,19 +57,10 @@ const Devices = () => (
     {Object.entries(images).map(([key, imageSizePair]) => {
       return (
         <Picture key={key}>
-          {imageSizePair.map(
-            ({ img, size }) =>
-              img && (
-                <source
-                  key={size}
-                  srcSet={img.default}
-                  media={`(min-width: ${size}px)`}
-                />
-              )
-          )}
-          {imageSizePair[0].img && (
-            <img key={key} src={imageSizePair[0].img} alt="" />
-          )}
+          {imageSizePair.map(({ img, size }) => (
+            <source key={size} srcSet={img} media={`(min-width: ${size}px)`} />
+          ))}
+          <img key={key} src={imageSizePair[0].img} alt="" />
         </Picture>
       );
     })}
