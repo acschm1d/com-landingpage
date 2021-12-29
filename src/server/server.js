@@ -10,7 +10,7 @@ const server = express();
 const port = 3000;
 
 server.get(
-  /\.(js|css|map|ico|png|svg|woff|woff2|eot|ttf|webmanifest|txt)$/,
+  /\.(js|css|map|ico|webp|svg|woff|woff2|eot|ttf|webmanifest|txt)$/,
   express.static(path.resolve(__dirname, '../../public'))
 );
 

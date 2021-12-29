@@ -13,7 +13,7 @@ const images = ['cup', 'laptop'].reduce((carry, image) => {
   sizes.forEach((size) => {
     carry[image] = [
       ...carry[image],
-      { size, img: `/assets/img/device-${image}-${size}.png` },
+      { size, img: `/assets/img/device-${image}-${size}.webp` },
     ];
   });
 
@@ -63,7 +63,12 @@ const Devices = () => (
       return (
         <Picture key={key}>
           {imageSizePair.map(({ img, size }) => (
-            <source key={size} srcSet={img} media={`(min-width: ${size}px)`} />
+            <source
+              key={size}
+              srcSet={img}
+              media={`(min-width: ${size}px)`}
+              type="image/webp"
+            />
           ))}
           <Image
             key={key}
