@@ -26,5 +26,5 @@ export const fontFace = (
   });
 
   const src = srcSet.join(', ');
-  return `@font-face { font-family: "${name}"; font-style: "${style}"; font-weight: ${weight}; src: ${src}; }`;
+  return `@font-face { font-family: "${name}"; font-style: "${style}"; font-weight: ${weight}; src: ${src}; font-display: swap; }`;
 };
