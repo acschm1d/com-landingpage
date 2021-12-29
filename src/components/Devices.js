@@ -52,6 +52,11 @@ const Picture = styled.picture`
   justify-content: flex-end;
 `;
 
+const Image = styled.img`
+  max-width: 100%;
+  height: auto;
+`;
+
 const Devices = () => (
   <Wrapper>
     {Object.entries(images).map(([key, imageSizePair]) => {
@@ -60,7 +65,11 @@ const Devices = () => (
           {imageSizePair.map(({ img, size }) => (
             <source key={size} srcSet={img} media={`(min-width: ${size}px)`} />
           ))}
-          <img key={key} src={imageSizePair[0].img} alt="" />
+          <Image
+            key={key}
+            src={imageSizePair.at(-1).img}
+            alt={key.charAt(0).toUpperCase() + key.slice(1)}
+          />
         </Picture>
       );
     })}
