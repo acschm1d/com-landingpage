@@ -72,7 +72,7 @@ const Devices = () => (
           ))}
           <Image
             key={key}
-            src={imageSizePair.at(-1).img}
+            src={imageSizePair[sizes.length - 1].img}
             alt={key.charAt(0).toUpperCase() + key.slice(1)}
           />
         </Picture>
