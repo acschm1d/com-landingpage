@@ -97,14 +97,14 @@ const Landing = () => (
             </Title>
           </header>
           <p>
-            I'm a Full Stack Web Developer from{' '}
+            I'm a Full Stack Software Engineer from{' '}
             <Highlight as="strong" weight="medium">
               Augsburg, Germany
             </Highlight>
-            . Frontend, Backend, DevOps <Divider /> PHP, OOP, SQL, RESTful{' '}
-            <Divider /> HTML5, ES2015+, CSS3, SCSS <Divider /> React, Next.js{' '}
-            <Divider /> Docker, CI/CD <Divider /> WordPress, Typo3, Magento 2.
-            Fascinated by new things and challenges.
+            .<br />
+            Frontend <Divider /> Backend <Divider /> DevOps <Divider /> Design{' '}
+            <Divider /> Project Management.
+            <br /> Fascinated by new things and challenges.
           </p>
         </Text>
       </TextInner>
