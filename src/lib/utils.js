@@ -2,7 +2,7 @@ export const fontFace = (
   name,
   weight = 400,
   style = 'normal',
-  exts = ['eot', 'woff', 'woff2', 'ttf', 'svg']
+  exts = ['eot', 'woff2', 'woff', 'ttf', 'svg']
 ) => {
   const filePath = `/assets/fonts/${name.toLowerCase()}/`;
 
@@ -26,5 +26,5 @@ export const fontFace = (
   });
 
   const src = srcSet.join(', ');
-  return `@font-face { font-family: "${name}"; font-style: "${style}"; font-weight: ${weight}; src: ${src}; font-display: swap; }`;
+  return `@font-face { font-family: "${name}"; font-style: "${style}"; font-weight: ${weight}; font-display: swap; src: local("${name}"), ${src}; }`;
 };

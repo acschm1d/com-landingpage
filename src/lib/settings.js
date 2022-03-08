@@ -20,7 +20,6 @@ const settings = {
       {
         name: 'Poppins',
         variants: [
-          { weight: 400, style: 'normal' },
           { weight: 600, style: 'normal' },
           { weight: 700, style: 'normal' },
         ],
@@ -30,7 +29,6 @@ const settings = {
         variants: [
           { weight: 400, style: 'normal' },
           { weight: 500, style: 'normal' },
-          { weight: 900, style: 'normal' },
         ],
       },
     ],
